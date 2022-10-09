@@ -1,0 +1,17 @@
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Services.deps.json
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Services.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Services.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Data.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Models.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Data.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\bin\Debug\net6.0\FitnessApp.Models.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.csproj.AssemblyReference.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.AssemblyInfoInputs.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.AssemblyInfo.cs
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.csproj.CopyComplete
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\refint\FitnessApp.Services.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\FitnessApp.Services.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Services\obj\Debug\net6.0\ref\FitnessApp.Services.dll

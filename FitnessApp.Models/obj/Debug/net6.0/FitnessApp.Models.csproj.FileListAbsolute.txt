@@ -1,0 +1,15 @@
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\bin\Debug\net6.0\FitnessApp.Models.deps.json
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\bin\Debug\net6.0\FitnessApp.Models.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\bin\Debug\net6.0\FitnessApp.Models.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\bin\Debug\net6.0\FitnessApp.Data.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\bin\Debug\net6.0\FitnessApp.Data.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.csproj.AssemblyReference.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.AssemblyInfoInputs.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.AssemblyInfo.cs
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.csproj.CopyComplete
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\refint\FitnessApp.Models.dll
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\FitnessApp.Models.pdb
+C:\Users\Hanyo\OneDrive\Desktop\Coding Study\FitnessApp.MVC\FitnessApp.Models\obj\Debug\net6.0\ref\FitnessApp.Models.dll
