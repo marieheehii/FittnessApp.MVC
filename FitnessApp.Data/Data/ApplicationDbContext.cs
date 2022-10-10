@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using FitnessApp.Data.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FitnessApp.Data
@@ -9,5 +10,10 @@ namespace FitnessApp.Data
             : base(options)
         {
         }
+        public List<Workout> Workouts { get; set; }
+        public List<SavedWorkout> SavedWorkouts { get; set; }
+        public List<Tags> Tagses { get; set; }
+        public List<UserRoutine> Routines { get; set; }
+
     }
 }
