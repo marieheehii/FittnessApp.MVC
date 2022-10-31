@@ -11,5 +11,6 @@ namespace FitnessApp.Models.Models.Tag
     {
         public int Id { get; set; }
         public virtual ICollection<Workout> Workouts { get; set; }
+        public string TagValue { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿using FitnessApp.Models.Models.SavedWorkouts;
+﻿using FitnessApp.Data;
+using FitnessApp.Data.Data;
+using FitnessApp.Models.Models.SavedWorkouts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +12,70 @@ namespace FitnessApp.Services.SavedWorkoutServices
 {
     public class SavedWorkoutServices : ISavedWorkoutServices
     {
-        public Task<bool> AddSavedWorkoutToDB(SavedWorkoutsCreate savedWorkout)
+        private readonly ApplicationDbContext _context;
+        public SavedWorkoutServices(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<bool> AddSavedWorkoutToDB(SavedWorkoutsCreate savedWorkout)
+        {
+            if(savedWorkout == null)
+            {
+                return false;
+            }
+            else
+            {
+                var entity = new SavedWorkout
+                {
+                    Comments = savedWorkout.Comments
+                };
+
+                _context.SavedWorkouts.Add(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
         }
 
-        public Task<bool> DeleteWorkout(int savedWorkoutId)
+        public async Task<bool> DeleteWorkout(int savedWorkoutId)
         {
-            throw new NotImplementedException();
+            var savedWorkout = await _context.SavedWorkouts.FindAsync(savedWorkoutId);
+            if (savedWorkout == null) return false;
+
+            _context.Remove(savedWorkout);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<SavedWorkoutsList>> GetAllSavedWorkouts()
+        public async Task<IEnumerable<SavedWorkoutsList>> GetAllSavedWorkouts()
         {
-            throw new NotImplementedException();
+            var savedWorkouts = await _context.SavedWorkouts.Select(w => new SavedWorkoutsList
+            {
+                Comments = w.Comments,
+
+            }).ToListAsync();
+            return savedWorkouts;
         }
 
-        public Task<SavedWorkoutsDetails> GetSavedWorkout(int savedWorkoutId)
+        public async Task<SavedWorkoutsDetails> GetSavedWorkout(int savedWorkoutId)
         {
-            throw new NotImplementedException();
+            var savedWorkout = await _context.SavedWorkouts.FindAsync(savedWorkoutId);
+            if (savedWorkout == null) return null;
+
+            return new SavedWorkoutsDetails
+            {
+                Comments = savedWorkout.Comments,
+            };
         }
 
-        public Task<bool> UpdateSavedWorkout(int savedWorkoutId, SavedWorkoutsEdit savedWorkout)
+        public async Task<bool> UpdateSavedWorkout(int savedWorkoutId, SavedWorkoutsEdit savedWorkout)
         {
-            throw new NotImplementedException();
+            var searchedSavedWorkout = await _context.SavedWorkouts.FindAsync(savedWorkoutId);
+            if (savedWorkout == null) return false;
+
+            searchedSavedWorkout.Comments = savedWorkout.Comments;
+
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

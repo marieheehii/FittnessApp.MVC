@@ -12,6 +12,6 @@ namespace FitnessApp.Services.TagServices
         Task<bool> AddTagToDB(TagsModel tag);
         Task<IEnumerable<TagsModel>> GetAllTags();
         Task<TagsModel> GetTag(int tagId);
-        Task<bool> DeleteWorkout(int tagId);
+        Task<bool> DeleteTag(int tagId);
     }
 }

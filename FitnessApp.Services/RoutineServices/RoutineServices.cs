@@ -1,4 +1,7 @@
-﻿using FitnessApp.Models.Models.UserRoutineModels;
+﻿using FitnessApp.Data;
+using FitnessApp.Data.Data;
+using FitnessApp.Models.Models.UserRoutineModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +12,85 @@ namespace FitnessApp.Services.RoutineServices
 {
     public class RoutineServices : IRoutineServices
     {
-        public Task<bool> AddRoutineToDB(UserRoutineCreate userRoutine)
+        private readonly ApplicationDbContext _context;
+        public RoutineServices(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<bool> DeleteRoutine(int routineId)
+        public async Task<bool> AddRoutineToDB(UserRoutineCreate userRoutine)
         {
-            throw new NotImplementedException();
+            if(userRoutine == null)
+            {
+                return false;
+            }
+            else
+            {
+                var entity = new UserRoutine
+                {
+                    Name = userRoutine.Name,
+                    UserId = userRoutine.UserId,
+                    WorkoutId = userRoutine.WorkoutId,
+                    AddedWorkouts = userRoutine.AddedWorkouts
+                };
+
+                _context.Routines.Add(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
         }
 
-        public Task<IEnumerable<UserRoutineList>> GetAllRoutines()
+        public async Task<bool> DeleteRoutine(int routineId)
         {
-            throw new NotImplementedException();
+            var userRoutine = await _context.Routines.FindAsync(routineId);
+            if(userRoutine == null)
+            {
+                return false;
+            }
+            else
+            {
+                _context.Remove(userRoutine);
+                await _context.SaveChangesAsync();
+                return true;
+            }
         }
 
-        public Task<UserRoutineDetail> GetRoutine(int routineId)
+        public async Task<IEnumerable<UserRoutineList>> GetAllRoutines()
         {
-            throw new NotImplementedException();
+            var userRoutine = await _context.Routines.Select(r => new UserRoutineList
+            {
+                Name = r.Name,
+                Weekday = r.Weekday,
+                Id = r.Id,
+            }).ToListAsync();
+            return userRoutine;
         }
 
-        public Task<bool> UpdateRoutibe(int routineId, UserRoutineEdit userRoutine)
+        public async Task<UserRoutineDetail> GetRoutine(int routineId)
         {
-            throw new NotImplementedException();
+            var routine = await _context.Routines.FindAsync(routineId);
+            if (routine == null) return null;
+
+            return new UserRoutineDetail
+            {
+                Id = routine.Id,
+                UserId = routine.UserId,
+                Weekday =routine.Weekday,
+                Name = routine.Name,
+                Workout = routine.Workout,
+                AddedWorkouts = routine.AddedWorkouts,
+            };
+        }
+
+        public async Task<bool> UpdateRoutibe(int routineId, UserRoutineEdit userRoutine)
+        {
+            var searchedRoutine = await _context.Routines.FindAsync(routineId);
+            if (userRoutine == null) return false;
+
+            searchedRoutine.Name = userRoutine.Name;
+
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

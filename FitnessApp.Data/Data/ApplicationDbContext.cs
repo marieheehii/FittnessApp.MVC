@@ -10,10 +10,10 @@ namespace FitnessApp.Data
             : base(options)
         {
         }
-        public List<Workout> Workouts { get; set; }
-        public List<SavedWorkout> SavedWorkouts { get; set; }
-        public List<Tags> Tagses { get; set; }
-        public List<UserRoutine> Routines { get; set; }
+        public DbSet<Workout> Workouts { get; set; }
+        public DbSet<SavedWorkout> SavedWorkouts { get; set; }
+        public DbSet<Tags> Tagses { get; set; }
+        public DbSet<UserRoutine> Routines { get; set; }
 
     }
 }
